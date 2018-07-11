@@ -1,0 +1,38 @@
+{
+  "name": "@goto-bus-stop/document-prop-types",
+  "description": "create a markdown table documenting a React component's propTypes",
+  "version": "0.0.0",
+  "author": "Renée Kooi <renee@kooi.me>",
+  "bin": "bin.js",
+  "bugs": {
+    "url": "https://github.com/goto-bus-stop/@goto-bus-stop/document-prop-types/issues"
+  },
+  "dependencies": {
+    "doctrine": "^2.1.0",
+    "react-docgen": "^3.0.0-beta12"
+  },
+  "devDependencies": {
+    "standard": "^11.0.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.0.0"
+  },
+  "homepage": "https://github.com/goto-bus-stop/@goto-bus-stop/document-prop-types",
+  "keywords": [
+    "docgen",
+    "documentation",
+    "generator",
+    "markdown",
+    "prop-types",
+    "react",
+    "table"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goto-bus-stop/@goto-bus-stop/document-prop-types.git"
+  },
+  "scripts": {
+    "test": "standard && node test | tap-spec"
+  }
+}
