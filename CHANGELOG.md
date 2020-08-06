@@ -1,4 +1,4 @@
-# @goto-bus-stop/document-prop-types change log
+# prop-types-table change log
 
 All notable changes to this project will be documented in this file.
 

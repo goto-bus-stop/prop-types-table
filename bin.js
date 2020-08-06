@@ -2,7 +2,7 @@
 
 var file = process.argv[2]
 if (!file) {
-  console.log('usage: document-prop-types <file>')
+  console.log('usage: prop-types-table <file>')
   process.exit(1)
 }
 

@@ -1,6 +1,9 @@
-# @goto-bus-stop/document-prop-types
+# prop-types-table
 
-create a markdown table documenting a React component's propTypes
+create a markdown table documenting a React component's `propTypes`
+
+> Adapted from material-ui's `PropTypeDescription` component:
+> https://github.com/callemall/material-ui/blob/82482758573dc714b210529dcf092dab904db0ba/docs/src/app/components/PropTypeDescription.js
 
 [Install](#install) - [Usage](#usage) - [License: Apache-2.0](#license)
 
@@ -8,23 +11,23 @@ create a markdown table documenting a React component's propTypes
 [![travis][travis-image]][travis-url]
 [![standard][standard-image]][standard-url]
 
-[npm-image]: https://img.shields.io/npm/v/@goto-bus-stop%2Fdocument-prop-types.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/@goto-bus-stop%2Fdocument-prop-types
-[travis-image]: https://img.shields.io/travis/goto-bus-stop/document-prop-types.svg?style=flat-square
-[travis-url]: https://travis-ci.org/goto-bus-stop/document-prop-types
+[npm-image]: https://img.shields.io/npm/v/prop-types-table.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/prop-types-table
+[travis-image]: https://img.shields.io/travis/goto-bus-stop/prop-types-table.svg?style=flat-square
+[travis-url]: https://travis-ci.org/goto-bus-stop/prop-types-table
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [standard-url]: http://npm.im/standard
 
 ## Install
 
 ```
-npm install @goto-bus-stop/document-prop-types
+npm install prop-types-table
 ```
 
 ## Usage
 
 ```bash
-document-prop-types src/index.js > generated-docs.md
+prop-types-table src/index.js > generated-docs.md
 ```
 
 The result looks a bit like this:
@@ -43,7 +46,7 @@ You can use this together with [md-insert][] to put prop type documentation for
 components into your markdown readme.
 
 ```bash
-document-prop-types src/index.js | md-insert -i README.md --header Props
+prop-types-table src/index.js | md-insert -i README.md --header Props
 ```
 
 ## License
