@@ -39,6 +39,15 @@ The result looks a bit like this:
 | onCued | function | () => {} | Sent when the video is cued and ready to play. |
 | onBuffering | function | () => {} | Sent when the video is buffering. |
 
+You can use this together with [md-insert][] to put prop type documentation for
+components into your markdown readme.
+
+```bash
+document-prop-types src/index.js | md-insert -i README.md --header Props
+```
+
 ## License
 
 [Apache-2.0](LICENSE.md)
+
+[md-insert]: https://github.com/goto-bus-stop/md-insert#readme
