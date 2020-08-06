@@ -2,7 +2,7 @@ var test = require('tape')
 var fs = require('fs')
 var docpt = require('.')
 
-test('basic', function (t) {
+test('class propTypes', function (t) {
   var source = fs.readFileSync(require.resolve('@u-wave/react-youtube/src/index.js'))
   var expected = `
 | Name | Type | Default | Description |
