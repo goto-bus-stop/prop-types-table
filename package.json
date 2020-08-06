@@ -8,14 +8,14 @@
     "url": "https://github.com/goto-bus-stop/@goto-bus-stop/document-prop-types/issues"
   },
   "dependencies": {
-    "doctrine": "^2.1.0",
-    "react-docgen": "^3.0.0-beta12"
+    "doctrine": "^3.0.0",
+    "react-docgen": "^5.3.0"
   },
   "devDependencies": {
     "@u-wave/react-youtube": "0.7.1",
-    "standard": "^11.0.0",
+    "standard": "^14.3.4",
     "tap-spec": "^5.0.0",
-    "tape": "^4.0.0"
+    "tape": "^5.0.1"
   },
   "homepage": "https://github.com/goto-bus-stop/@goto-bus-stop/document-prop-types",
   "keywords": [
