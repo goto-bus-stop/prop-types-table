@@ -12,6 +12,7 @@
     "react-docgen": "^3.0.0-beta12"
   },
   "devDependencies": {
+    "@u-wave/react-youtube": "0.7.1",
     "standard": "^11.0.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.0.0"
