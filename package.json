@@ -5,7 +5,7 @@
   "author": "Renée Kooi <renee@kooi.me>",
   "bin": "bin.js",
   "bugs": {
-    "url": "https://github.com/goto-bus-stop/@goto-bus-stop/document-prop-types/issues"
+    "url": "https://github.com/goto-bus-stop/document-prop-types/issues"
   },
   "dependencies": {
     "doctrine": "^3.0.0",
@@ -17,7 +17,7 @@
     "tap-spec": "^5.0.0",
     "tape": "^5.0.1"
   },
-  "homepage": "https://github.com/goto-bus-stop/@goto-bus-stop/document-prop-types",
+  "homepage": "https://github.com/goto-bus-stop/document-prop-types",
   "keywords": [
     "docgen",
     "documentation",
@@ -31,7 +31,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/goto-bus-stop/@goto-bus-stop/document-prop-types.git"
+    "url": "https://github.com/goto-bus-stop/document-prop-types.git"
   },
   "scripts": {
     "test": "standard && node test | tap-spec"
