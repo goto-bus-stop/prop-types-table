@@ -1,10 +1,10 @@
-var test = require('tape')
-var fs = require('fs')
-var docpt = require('.')
+const test = require('tape')
+const fs = require('fs')
+const docpt = require('.')
 
 test('class propTypes', function (t) {
-  var source = fs.readFileSync(require.resolve('@u-wave/react-youtube/src/index.js'))
-  var expected = `
+  const source = fs.readFileSync(require.resolve('@u-wave/react-youtube/src/index.js'))
+  const expected = `
 | Name | Type | Default | Description |
 |:-----|:-----|:-----|:-----|
 | video | string |  | An 11-character string representing a YouTube video ID.. |
