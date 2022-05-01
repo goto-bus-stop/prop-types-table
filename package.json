@@ -34,6 +34,8 @@
     "url": "https://github.com/goto-bus-stop/prop-types-table.git"
   },
   "scripts": {
-    "test": "standard && node test | tap-spec"
+    "lint": "standard",
+    "tests-only": "node test",
+    "test": "npm run -s tests-only | tap-spec && npm run lint"
   }
 }
