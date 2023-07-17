@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "doctrine": "^3.0.0",
-    "react-docgen": "^5.3.0"
+    "react-docgen": "^6.0.2"
   },
   "devDependencies": {
     "@u-wave/react-youtube": "0.7.1",
