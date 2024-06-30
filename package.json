@@ -14,8 +14,7 @@
   "devDependencies": {
     "@u-wave/react-youtube": "0.7.1",
     "standard": "^17.0.0",
-    "tap-spec": "^5.0.0",
-    "tape": "^5.0.1"
+    "tap-spec": "^5.0.0"
   },
   "homepage": "https://github.com/goto-bus-stop/prop-types-table",
   "keywords": [
@@ -35,7 +34,7 @@
   },
   "scripts": {
     "lint": "standard",
-    "tests-only": "node test",
+    "tests-only": "node --test",
     "test": "npm run -s tests-only | tap-spec && npm run lint"
   }
 }

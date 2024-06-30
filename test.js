@@ -1,8 +1,10 @@
-const test = require('tape')
-const fs = require('fs')
+'use strict'
+const test = require('node:test')
+const assert = require('node:assert')
+const fs = require('node:fs')
 const docpt = require('.')
 
-test('class propTypes', function (t) {
+test('class propTypes', function () {
   const source = fs.readFileSync(require.resolve('@u-wave/react-youtube/src/index.js'))
   const expected = `
 | Name | Type | Default | Description |
@@ -43,6 +45,5 @@ test('class propTypes', function (t) {
 | onPlaybackQualityChange | function |  |  |
   `.trim()
 
-  t.equal(docpt(source), expected + '\n')
-  t.end()
+  assert.equal(docpt(source), expected + '\n')
 })
