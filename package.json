@@ -1,7 +1,7 @@
 {
   "name": "prop-types-table",
   "description": "create a markdown table documenting a React component's propTypes",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "author": "Renée Kooi <renee@kooi.me>",
   "bin": "bin.js",
