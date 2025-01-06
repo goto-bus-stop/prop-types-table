@@ -1,13 +1,10 @@
 import test from 'node:test'
 import assert from 'node:assert'
 import fs from 'node:fs'
-import { fileURLToPath } from 'node:url'
 import docpt from 'prop-types-table'
 
 test('class propTypes', function () {
-  const source = fs.readFileSync(
-    fileURLToPath(import.meta.resolve('@u-wave/react-youtube/src/index.js'))
-  )
+  const source = fs.readFileSync('./node_modules/@u-wave/react-youtube/src/index.js')
   const expected = `
 | Name | Type | Default | Description |
 |:-----|:-----|:-----|:-----|
