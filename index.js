@@ -5,10 +5,10 @@
  * (c) Call-Em-All
  */
 
-const { parse } = require('react-docgen')
-const parseDoctrine = require('doctrine').parse
+import { parse } from 'react-docgen'
+import { parse as parseDoctrine } from 'doctrine'
 
-module.exports = render
+export default render
 
 function generatePropType (type) {
   switch (type.name) {

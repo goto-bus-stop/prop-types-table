@@ -2,6 +2,7 @@
   "name": "prop-types-table",
   "description": "create a markdown table documenting a React component's propTypes",
   "version": "1.0.0",
+  "type": "module",
   "author": "Renée Kooi <renee@kooi.me>",
   "bin": "bin.js",
   "bugs": {
@@ -27,6 +28,10 @@
   ],
   "license": "Apache-2.0",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/goto-bus-stop/prop-types-table.git"
