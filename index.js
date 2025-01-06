@@ -80,7 +80,7 @@ function render (code) {
   let text = '| Name | Type | Default | Description |\n' +
              '|:-----|:-----|:-----|:-----|\n'
 
-  const componentInfo = parse(code)
+  const [componentInfo] = parse(code)
 
   Object.keys(componentInfo.props).forEach((key) => {
     const prop = componentInfo.props[key]
