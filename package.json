@@ -9,6 +9,7 @@
     "url": "https://github.com/goto-bus-stop/prop-types-table/issues"
   },
   "dependencies": {
+    "@babel/plugin-syntax-typescript": "^7.25.9",
     "doctrine": "^3.0.0",
     "react-docgen": "^7.1.0"
   },

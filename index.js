@@ -5,6 +5,7 @@
  * (c) Call-Em-All
  */
 
+import ts from '@babel/plugin-syntax-typescript'
 import { parse } from 'react-docgen'
 import { parse as parseDoctrine } from 'doctrine'
 
@@ -27,7 +28,16 @@ function generatePropType (type) {
   }
 }
 
-function generateDescription (required, description, type) {
+function generateTsPropType (type) {
+  switch (type.name) {
+    case 'union':
+      return type.raw
+    default:
+      return type.name
+  }
+}
+
+function generateDescription (required, description, type, tsType) {
   const parsed = parseDoctrine(description)
 
   // two new lines result in a newline in the table. all other new lines
@@ -39,7 +49,7 @@ function generateDescription (required, description, type) {
   }
   let signature = ''
 
-  if (type.name === 'func' && parsed.tags.length > 0) {
+  if (type != null && type.name === 'func' && parsed.tags.length > 0) {
     // Remove new lines from tag descriptions to avoid markdown errors.
     parsed.tags.forEach((tag) => {
       if (tag.description) {
@@ -80,12 +90,18 @@ function render (code) {
   let text = '| Name | Type | Default | Description |\n' +
              '|:-----|:-----|:-----|:-----|\n'
 
-  const [componentInfo] = parse(code)
+  const [componentInfo] = parse(code, {
+    babelOptions: {
+      plugins: [
+        [ts, { isTSX: true }]
+      ]
+    }
+  })
 
   Object.keys(componentInfo.props).forEach((key) => {
     const prop = componentInfo.props[key]
 
-    const description = generateDescription(prop.required, prop.description, prop.type)
+    const description = generateDescription(prop.required, prop.description, prop.type, prop.tsType)
 
     if (description === null) return
 
@@ -99,7 +115,8 @@ function render (code) {
       key = `<span style="color: #31a148">${key} *</span>` // eslint-disable-line no-param-reassign
     }
 
-    text += `| ${key} | ${generatePropType(prop.type)} | ${defaultValue} | ${description} |\n`
+    const ty = prop.tsType ? generateTsPropType(prop.tsType) : generatePropType(prop.type)
+    text += `| ${key} | ${ty} | ${defaultValue} | ${description} |\n`
   })
 
   return text
